@@ -1,0 +1,28 @@
+security:
+  basic:
+    enabled: false
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://127.0.0.1:3306/nslog?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=CST"
+    username: root
+    password: 123456
+    default-auto-commit: false
+    auto-commit: false
+    maximum-pool-size: 100
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    initial-size: 5
+    validation-query: SELECT 1
+    test-on-borrow: false
+    test-while-idle: true
+    time-between-eviction-runs-millis: 18800
+    minEvictableIdleTimeMillis: 300000
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
